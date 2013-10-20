@@ -1,0 +1,1 @@
+require "jobbee/frontend/engine"
