@@ -1,0 +1,1 @@
+Jobbee::BaseController.send(:include, Jobbee::ViewContext)

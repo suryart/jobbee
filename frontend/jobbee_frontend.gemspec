@@ -1,12 +1,10 @@
-$:.push File.expand_path("../lib", __FILE__)
-
-# Maintain your gem's version:
-require "jobbee_frontend/version"
+# encoding: UTF-8
+version = File.read(File.expand_path("../../JOBBEE_VERSION", __FILE__)).strip
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "jobbee_frontend"
-  s.version     = JobbeeFrontend::VERSION
+  s.version     = version
   s.authors     = ["TODO: Your name"]
   s.email       = ["TODO: Your email"]
   s.homepage    = "TODO"

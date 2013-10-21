@@ -1,2 +1,2 @@
-JobbeeCore::Engine.routes.draw do
+Jobbee::Core::Engine.routes.draw do
 end
