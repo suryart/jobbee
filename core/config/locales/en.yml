@@ -1,0 +1,11 @@
+en:
+  jobbee:
+    administration: Administration
+    authorization_failure: Authorization Failure!
+    errors_prohibited_this_record_from_being_saved:
+      one: 1 error prohibited this record from being saved
+      other: ! '%{count} errors prohibited this record from being saved'
+    loading: Loading
+    ssl:
+      change_protocol: "Please switch to using HTTP (rather than HTTPS) and retry this request."
+    there_were_problems_with_the_following_fields: There were problems with the following fields

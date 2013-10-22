@@ -1,0 +1,31 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
+  <head data-hook="admin_inside_head">
+    <%= render :partial => 'jobbee/admin/shared/head' %>
+  </head>
+  
+  <body>
+    <% if flash[:error] %>
+      <div class="flash error"><%= flash[:error] %></div>
+    <% end %>
+    <% if notice %>
+      <div class="flash notice"><%= notice %></div>
+    <% end %>
+    <% if flash[:success] %>
+      <div class="flash success"><%= flash[:success] %></div>
+    <% end %>
+
+    <div id="progress">
+      <div class="wrapper">
+        <div id="spinner"></div>
+        <div class="progress-message"><%= Jobbee.t(:loading) %>...</div>
+      </div>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

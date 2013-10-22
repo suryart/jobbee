@@ -145,12 +145,13 @@ class JobbeeBasicTables < ActiveRecord::Migration
     add_index :jobbee_assets, [:viewable_id],          :name => 'index_assets_on_viewable_id'
     add_index :jobbee_assets, [:viewable_type, :type], :name => 'index_assets_on_viewable_type_and_type'
 
-    create_table :jobbee_job_applications do |t|
-      t.string  :firstname, :default => '', :null => false
-      t.string  :lastname, :default => '', :null => false
-      t.string  :email, :default => '', :null => false
-      t.text    :address, :default => '', :null => false
-      t.integer :contact_number, :null => false
+    create_table :jobbee_job_applicants do |t|
+      t.string   :firstname, :default => '', :null => false
+      t.string   :lastname, :default => '', :null => false
+      t.datetime :dob, :null => false
+      t.string   :email, :default => '', :null => false
+      t.text     :address, :default => '', :null => false
+      t.integer  :contact_number, :null => false
 
       t.timestamps
     end
