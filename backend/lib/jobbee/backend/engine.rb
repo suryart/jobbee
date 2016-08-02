@@ -5,10 +5,6 @@ module Jobbee
 
       config.autoload_paths += %W(#{config.root}/lib)
 
-      initializer "jobbee.backend.environment", :before => :load_config_initializers do |app|
-        Jobbee::Backend::Config = Jobbee::BackendConfiguration.new
-      end
-
       # filter sensitive information during logging
       initializer "jobbee.params.filter" do |app|
         app.config.filter_parameters += [:password, :password_confirmation, :contact_number]

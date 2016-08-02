@@ -30,5 +30,12 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
+desc "Creates a sandbox application for simulating the Spree code in a deployed Rails app"
+task :sandbox do
+  Bundler.with_clean_env do
+    exec("lib/sandbox.sh")
+  end
+end
+
 
 task default: :test
